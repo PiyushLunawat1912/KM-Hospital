@@ -1,0 +1,277 @@
+/* Hero Section Styling */
+.hero-section {
+  padding: 60px 0;
+}
+
+.why-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-box {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-box i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.card-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Lazy Loading Initial State */
+.lazy-load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible State */
+.lazy-load.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* About Section */
+
+.about.section {
+  padding: 60px 0;
+}
+
+.about-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(66, 171, 219, 0.1);
+  position: relative;
+}
+
+.pulsating-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pulsating-play-btn i {
+  font-size: 20px;
+  color: #ff4a57;
+}
+
+.pulsating-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.content h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.about-icon {
+  font-size: 30px;
+  color: #ff4a57;
+  margin-right: 15px;
+}
+
+.about-list h5 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.about-list p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about.section {
+    padding: 40px 20px;
+  }
+
+  .about-img {
+    margin-bottom: 20px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .about-icon {
+    font-size: 24px;
+  }
+
+  .about-list h5 {
+    font-size: 16px;
+  }
+
+  .about-list p {
+    font-size: 13px;
+  }
+}
+
+
+
+
+/* Services Section */
+
+/* Contact Section */
+
+/* src/app/contact/contact.component.css */
+
+.contact {
+  padding: 40px 0; /* Reduced padding */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin */
+}
+
+.section-title h2 {
+  font-size: 2rem; /* Smaller font size */
+  font-weight: 600; /* Lighter font weight */
+  margin-bottom: 10px;
+  color: #333; /* Darker text for better contrast */
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: #777; /* Lighter text color */
+}
+
+#contact iframe {
+  border: 0;
+  width: 100%;
+  height: 250px; /* Slightly reduced height */
+}
+
+.info-item {
+  margin-bottom: 25px; /* Reduced margin */
+  display: flex;
+  align-items: center;
+}
+
+.info-item i {
+  font-size: 1.8rem; /* Slightly smaller icon */
+  margin-right: 15px;
+  color: #007bff; /* Maintained color for consistency */
+}
+
+.info-item h3 {
+  font-size: 1.1rem; /* Slightly smaller font size */
+  font-weight: 500; /* Lighter font weight */
+}
+
+.info-item p {
+  font-size: 0.9rem; /* Reduced font size */
+  color: #777;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem; /* Smaller font size */
+}
+
+.php-email-form button {
+  padding: 12px 25px; /* Slightly smaller padding */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 43px;
+  transition: background-color 0.3s;
+  font-weight: 500; /* Slightly lighter font weight */
+}
+
+.php-email-form button:hover {
+  background-color: #a9cef6;
+}
+
+.text-center .loading,
+.text-center .error-message,
+.text-center .sent-message {
+  display: none;
+}
+
+.text-center .sent-message {
+  color: green;
+}
+
+.text-center .error-message {
+  color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+  .info-item {
+      margin-bottom: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .info-item i {
+      font-size: 1.6rem;
+  }
+
+  .php-email-form button {
+      width: 100%;
+      padding: 12px;
+  }
+}
+

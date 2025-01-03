@@ -1,0 +1,175 @@
+/* Header Section */
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar {
+  background: #0056b3;
+  padding: 5px 0;
+}
+
+.contact-info a,
+.contact-info span {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.navbar {
+  background: #007bff;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .sitename {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left; /* Align left for PC */
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu a.active,
+.navbar .menu a:hover {
+  color: #ffd700;
+}
+
+.appointment-btn {
+  background: #ffd700;
+  color: #007bff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.appointment-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('/assets/img/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn-primary {
+  background: #ffd700;
+  color: #007bff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    display: none; /* Hide menu by default */
+  }
+
+  .navbar .menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .navbar .sitename {
+    text-align: center; /* Center the sitename on mobile */
+    flex: 1;
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger menu icon */
+  }
+
+  .appointment-btn {
+    display: none; /* Hide appointment button on mobile */
+  }
+}
+
+/* Show menu items on click */
+.menu.active {
+  display: flex !important;
+}

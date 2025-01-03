@@ -1,0 +1,79 @@
+<header id="header" class="header sticky-top">
+  <div class="topbar">
+    <div class="container">
+      <div class="contact-info">
+        <a href="mailto:contact@example.com"
+          ><i class="fas fa-envelope"></i> contact@example.com</a
+        >
+
+        <span class="contact-info">
+          <a href="tel:+1-5589-55488-55"
+            ><i class="fas fa-phone"></i> +1 5589 55488 55</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <!-- Sitename -->
+      <h1 class="sitename" id="sitename">KM Hospital</h1>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Menu -->
+      <ul class="menu" [ngClass]="{ active: isMenuActive }">
+        <li>
+          <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/services"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <button class="appointment-btn">Make an Appointment</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-card" data-aos="zoom-in">
+      <h1>WELCOME TO KM Hospital</h1>
+      <p>We are a team of talented designers making websites with Bootstrap</p>
+      <!-- <button class="btn-primary">Learn More</button> -->
+    </div>
+  </div>
+</section>
+
+<!-- Routed components displayed here -->
+<router-outlet></router-outlet>
+
+<!-- Footer Section -->
+<app-footer></app-footer>
