@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './admin-routing.module';
 import { HttpClientModule } from '@angular/common/http';  // Import HttpClientModule if making API calls
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,7 +19,8 @@ import { SignupComponent } from './signup/signup.component';
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

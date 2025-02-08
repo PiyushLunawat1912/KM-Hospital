@@ -19,4 +19,20 @@ export class AppointmentService {
     return this.http.get<any>(this.apiUrl);
   }
 
+  getAllAppointments(): Observable<any> {
+    return this.http.get('http://192.168.29.104:3000/api/manage-appointments');
+  }
+ 
+    
+  submitAppointment(appointmentData: any): Observable<any> {
+    return this.http.post('/api/appointments', appointmentData); // Adjust the URL to match your API
+  }
+  deleteAllAppointments(): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/clear`);
+  }
+
+  clearAppointments(): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/clear`);
+  }
+
 }

@@ -59,11 +59,11 @@ p {
 }
 
 /* Logout Button */
-.logout-btn {
-  position: fixed; /* Fixed position to always stay at the top-right */
+/* .logout-btn {
+  position: fixed; 
   top: 400px;
   right: 20px;
-  background-color: #d9534f;  /* Bootstrap 'danger' red color */
+  background-color: #d9534f; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -75,8 +75,8 @@ p {
 }
 
 .logout-btn:hover {
-  background-color: #c9302c;  /* Darker red on hover */
-}
+  background-color: #c9302c;  
+} */
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
