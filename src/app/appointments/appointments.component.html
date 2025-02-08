@@ -1,0 +1,38 @@
+<div class="appointments-container">
+  <h2>Booked Appointments</h2>
+
+  <!-- Table Container for horizontal scrolling -->
+  <div class="table-container">
+    <table *ngIf="appointments.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Appointment Date</th>
+          <th>Message</th>
+          <th>
+            <button (click)="clearAllAppointments()" class="clear-button">
+              Clear All Appointments
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.name }} {{ appointment.lastName }}</td>
+          <td>{{ appointment.email }}</td>
+          <td>{{ appointment.phone }}</td>
+          <td>{{ appointment.date }}</td>
+          <td>{{ appointment.message }}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="goBack()" class="back-button">
+      Back to Booked Appointments
+    </button>
+  </div>
+
+  <p *ngIf="appointments.length === 0">No appointments available.</p>
+</div>

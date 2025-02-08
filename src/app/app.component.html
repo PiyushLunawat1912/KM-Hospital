@@ -2,23 +2,24 @@
   <div class="topbar">
     <div class="container">
       <div class="contact-info">
-        <a href="mailto:contact@example.com"
-          ><i class="fas fa-envelope"></i> contact@example.com</a
+        <a href="mailto:kmmhospitalpimpri@gmail.com"
+          ><i class="fas fa-envelope"></i>kmmhospitalpimpri@gmail.com</a
         >
 
         <span class="contact-info">
-          <a href="tel:+1-5589-55488-55"
-            ><i class="fas fa-phone"></i> +1 5589 55488 55</a
+          <a href="tel:84840 69695"
+            ><i class="fas fa-phone"></i> 84840 69695</a
           ></span
         >
       </div>
     </div>
   </div>
-
   <nav class="navbar">
     <div class="container">
-      <!-- Sitename -->
-      <h1 class="sitename" id="sitename">KM Hospital</h1>
+      <div class="logo-container">
+        <img src="assets/img/logo.jpg" alt="KM Hospital Logo" class="logo" />
+        <h3 class="sitename" id="sitename">K.M.M HOSPITAL</h3>
+      </div>
 
       <!-- Hamburger Menu for Mobile -->
       <div class="menu-toggle" (click)="toggleMenu()">
@@ -31,12 +32,12 @@
       <ul class="menu" [ngClass]="{ active: isMenuActive }">
         <li>
           <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"
-            >Home</a
+            ><i><b>Home</b></i></a
           >
         </li>
         <li>
           <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"
-            >About</a
+            ><i><b>About</b></i></a
           >
         </li>
         <li>
@@ -44,7 +45,7 @@
             routerLink="/services"
             routerLinkActive="active"
             (click)="closeMenu()"
-            >Services</a
+            ><i><b>Services</b></i></a
           >
         </li>
         <li>
@@ -52,19 +53,52 @@
             routerLink="/contact"
             routerLinkActive="active"
             (click)="closeMenu()"
-            >Contact</a
+            ><i><b>Contact</b></i></a
           >
         </li>
       </ul>
 
-      <button class="appointment-btn">Make an Appointment</button>
+      <!-- Buttons -->
+      <header>
+        <nav>
+          <ul>
+            <!-- Other nav items -->
+
+            <!-- Conditionally display login button if user is not logged in -->
+            <li *ngIf="!isLoggedIn">
+              <button (click)="onLogin()">Login</button>
+            </li>
+
+            <!-- Conditionally display logout button if user is logged in -->
+            <li *ngIf="isLoggedIn">
+              <button (click)="onLogout()">Logout</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <button
+        *ngIf="isLoggedIn"
+        (click)="manageAppointments()"
+        class="manage-appointments-btn"
+      >
+        Manage Appointments
+      </button>
+
+      <button (click)="scrollToAppointment()" class="appointment-btn">
+        Make an Appointment
+      </button>
+      <a href="tel:84840 69695" class="btn-quick-callcta">
+        <span class="call-txt">Call Us Now</span>
+        <span class="call-num">84840 69695</span>
+      </a>
     </div>
   </nav>
 </header>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-card" data-aos="zoom-in">
+    <div class="hero-card">
       <h1>WELCOME TO KM Hospital</h1>
       <p>We are a team of talented designers making websites with Bootstrap</p>
       <!-- <button class="btn-primary">Learn More</button> -->

@@ -1,0 +1,84 @@
+/* General Styling */
+.appointments-container {
+  max-width: 100%;
+  padding: 20px;
+  overflow-x: auto; /* Prevent content overflow */
+}
+
+/* Ensure table container allows scrolling */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Prevents the table from shrinking too much */
+}
+
+/* Styling for table headers and cells */
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+/* Styling for buttons */
+.back-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block; /* Makes button appear below the table */
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.clear-button{
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #f74c26;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block; /* Makes button appear below the table */
+  width: fit-content;
+}
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .appointments-container {
+    padding: 15px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .back-button {
+    width: 70%; /* Makes button full width on small screens */
+    text-align: center;
+  }
+}

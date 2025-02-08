@@ -4,13 +4,13 @@
     <div class="row align-items-center">
       <!-- Why Choose Us -->
       <div class="col-lg-4">
-        <div class="lazy-load why-box" data-animation="fade-right">
+        <div class="lazy-load why-box">
           <h3>Why Choose KM Hospital?</h3>
           <p>
             At KM Hospital, we redefine healthcare with a commitment to
             excellence and compassion.
           </p>
-          <a href="#about" class="btn btn-primary">Learn More</a>
+          <a routerLink="/about" class="btn btn-primary">Learn More</a>
         </div>
       </div>
       <!-- Feature Cards -->
@@ -18,7 +18,7 @@
         <div class="row gy-4">
           <!-- Card 1 -->
           <div class="col-md-4">
-            <div class="lazy-load card-box" data-animation="fade-up">
+            <div class="lazy-load card-box">
               <i class="bi bi-clipboard-data"></i>
               <h4>Your Health, Our Mission</h4>
               <p>
@@ -29,11 +29,7 @@
           </div>
           <!-- Card 2 -->
           <div class="col-md-4">
-            <div
-              class="lazy-load card-box"
-              data-animation="fade-up"
-              data-delay="200"
-            >
+            <div class="lazy-load card-box">
               <i class="bi bi-gem"></i>
               <h4>24/7 Emergency Services</h4>
               <p>
@@ -44,11 +40,7 @@
           </div>
           <!-- Card 3 -->
           <div class="col-md-4">
-            <div
-              class="lazy-load card-box"
-              data-animation="fade-up"
-              data-delay="400"
-            >
+            <div class="lazy-load card-box">
               <i class="bi bi-inboxes"></i>
               <h4>Affordable Healthcare</h4>
               <p>"Quality healthcare at prices accessible to everyone." .</p>
@@ -60,17 +52,11 @@
   </div>
 </section>
 
-<!-- ABOUT Section  -->
-
-<!-- About Section -->
+<!-- ABOUT Section -->
 <section id="about" class="about section">
   <div class="container">
     <div class="row gy-4 gx-5">
-      <div
-        class="col-lg-6 position-relative align-self-start"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
+      <div class="col-lg-6 position-relative align-self-start">
         <img
           src="assets/img/about.jpg"
           class="img-fluid about-img"
@@ -84,7 +70,7 @@
         </a>
       </div>
 
-      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 content">
         <h3>About Us</h3>
         <p>
           Dolor iure expedita id fuga asperiores qui sunt consequatur minima.
@@ -128,56 +114,311 @@
     </div>
   </div>
 </section>
-<!-- /About Section -->
 
 <!-- Services Section -->
-<div class="services-page">
-  <h2>Our Services</h2>
-  <ul>
-    <li>Emergency Services</li>
-    <li>Outpatient Care</li>
-    <li>Inpatient Care</li>
-    <li>Diagnostic Imaging</li>
-  </ul>
-</div>
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-cards">
+      <!-- General Surgery -->
+      <div class="service-card">
+        <h3>General Surgery</h3>
+        <ul>
+          <li>Treatment for abdominal ailments, hernia, and appendix</li>
+          <li>Major operations and theater facilities</li>
+        </ul>
+      </div>
 
-<!-- /Services Section -->
+      <!-- General Medicine -->
+      <div class="service-card">
+        <h3>General Medicine</h3>
+        <ul>
+          <li>Diabetes and heart disease treatment</li>
+          <li>Tuberculosis treatment (DOT)</li>
+          <li>ECG (Electrocardiogram)</li>
+        </ul>
+      </div>
+
+      <!-- Orthopedic -->
+      <div class="service-card">
+        <h3>Orthopedic</h3>
+        <ul>
+          <li>Bone and joint disorders</li>
+          <li>Accident care</li>
+          <li>Arthroscopy</li>
+          <li>Spine-related treatment</li>
+        </ul>
+      </div>
+
+      <!-- Specialty Treatment -->
+      <div class="service-card">
+        <h3>Specialty Treatment Center</h3>
+        <ul>
+          <li>ENT (Ear, Nose, Throat) Department</li>
+          <li>Mental Health Department</li>
+          <li>25 Pathology Laboratory</li>
+          <li>Physiotherapy</li>
+        </ul>
+      </div>
+
+      <!-- Obstetrics and Gynecology -->
+      <div class="service-card">
+        <h3>Obstetrics and Gynecology</h3>
+        <ul>
+          <li>Maternity care and labor room</li>
+          <li>Government-approved family planning center</li>
+          <li>Contraceptive services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insurence Section -->
+<section class="insurance-section">
+  <div class="container">
+    <h2 class="section-title">Our Insurance Services</h2>
+    <div class="insurance-cards">
+      <!-- Card 1 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <h3>Health Insurance</h3>
+        <p>
+          Comprehensive coverage for hospitalization, surgery, and medication
+          expenses.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Life Insurance</h3>
+        <p>Secure your family's future with tailored life insurance plans.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-car"></i>
+        </div>
+        <h3>Vehicle Insurance</h3>
+        <p>Protect your car or bike with affordable and reliable insurance.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-plane"></i>
+        </div>
+        <h3>Travel Insurance</h3>
+        <p>
+          Coverage for medical emergencies and trip cancellations while
+          traveling.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <h3>Home Insurance</h3>
+        <p>Secure your home against natural disasters, fire, and theft.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3>Business Insurance</h3>
+        <p>
+          Customizable plans to protect your business assets and operations.
+        </p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h3>Critical Illness Insurance</h3>
+        <p>
+          Financial support for critical illnesses like cancer, heart attack,
+          and more.
+        </p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Student Insurance</h3>
+        <p>
+          Protection for students studying abroad, including health coverage.
+        </p>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-ambulance"></i>
+        </div>
+        <h3>Accident Insurance</h3>
+        <p>
+          Comprehensive support for accidental injuries and treatment expenses.
+        </p>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="insurance-card">
+        <div class="card-icon">
+          <i class="fas fa-paw"></i>
+        </div>
+        <h3>Pet Insurance</h3>
+        <p>Coverage for your pet's medical expenses and wellness visits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Section -->
+<section id="appointment" class="appointment section">
+  <div class="container section-title">
+    <h2>Appointment</h2>
+    <p>Book your appointment by filling the form below.</p>
+  </div>
+
+  <div class="container">
+    <form (ngSubmit)="submitAppointment()" #appointmentForm="ngForm">
+      <!-- Row 1: First Name and Last Name -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="appointment.name"
+            class="form-control"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            type="text"
+            name="lastName"
+            [(ngModel)]="appointment.lastName"
+            class="form-control"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Row 2: Email and Phone -->
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="appointment.email"
+            class="form-control"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            type="tel"
+            name="phone"
+            [(ngModel)]="appointment.phone"
+            class="form-control"
+            placeholder="Your Phone"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Row 3: Date and Message -->
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <input
+            type="datetime-local"
+            name="date"
+            [(ngModel)]="appointment.date"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <textarea
+            name="message"
+            [(ngModel)]="appointment.message"
+            class="form-control"
+            rows="3"
+            placeholder="Message (Optional)"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary px-5 py-2">
+          Make an Appointment
+        </button>
+      </div>
+    </form>
+
+    <!-- Success Message -->
+    <div *ngIf="successMessage" class="alert alert-success mt-4">
+      {{ successMessage }}
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+      {{ errorMessage }}
+    </div>
+  </div>
+</section>
+
+<!-- /Appointment Section -->
 
 <!-- Contact Section -->
-<!-- src/app/contact/contact.component.html -->
 <section id="contact" class="contact section">
   <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
+  <div class="container section-title">
     <h2>Contact</h2>
     <p>
-      Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-      consectetur velit
+      "Feel free to contact us for any inquiries or questions. We're here to
+      help!"
     </p>
   </div>
   <!-- End Section Title -->
 
   <!-- Google Maps Embed -->
-  <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+  <div class="mb-5">
     <iframe
       style="border: 0; width: 100%; height: 270px"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6874225017245!2d73.8734412!3d18.452496099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaef11ea8bbd%3A0x828b2ade7a00a797!2sYashashree%20Housing%20Society!5e0!3m2!1sen!2sin!4v1735836284913!5m2!1sen!2sin"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.975211855049!2d73.7987956743703!3d18.620184666125514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b856876a422b%3A0x904c8cde483b0d85!2sK.%20M.%20Mulitispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1738437923769!5m2!1sen!2sin"
       width="600"
       height="450"
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-    >
-      frameborder="0" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade" ></iframe
-    >
+    ></iframe>
   </div>
   <!-- End Google Maps -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
     <div class="row gy-4">
       <div class="col-lg-4">
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="info-item d-flex">
           <i class="bi bi-geo-alt flex-shrink-0"></i>
           <div>
             <h3>Location</h3>
@@ -186,7 +427,7 @@
         </div>
         <!-- End Info Item -->
 
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="info-item d-flex">
           <i class="bi bi-telephone flex-shrink-0"></i>
           <div>
             <h3>Call Us</h3>
@@ -195,7 +436,7 @@
         </div>
         <!-- End Info Item -->
 
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+        <div class="info-item d-flex">
           <i class="bi bi-envelope flex-shrink-0"></i>
           <div>
             <h3>Email Us</h3>
@@ -206,13 +447,7 @@
       </div>
 
       <div class="col-lg-8">
-        <form
-          action="forms/contact.php"
-          method="post"
-          class="php-email-form"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <form action="forms/contact.php" method="post" class="php-email-form">
           <div class="row gy-4">
             <div class="col-md-6">
               <input
@@ -271,5 +506,3 @@
   </div>
 </section>
 <!-- End Contact Section -->
-
-<!-- /Contact Section -->
