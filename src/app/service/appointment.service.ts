@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AppointmentService {
-  private apiUrl = 'http://192.168.29.104:3000/api/appointments'; // Ensure this matches your backend
+  private apiUrl = 'http://localhost:3000/api/appointments'; // Ensure this matches your backend
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class AppointmentService {
   }
 
   getAllAppointments(): Observable<any> {
-    return this.http.get('http://192.168.29.104:3000/api/manage-appointments');
+    return this.http.get('http://localhost:3000/api/manage-appointments');
   }
  
     

@@ -7,7 +7,7 @@ import { Observable, BehaviorSubject, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://192.168.29.104:3000/api/auth';  // Your backend API
+  private apiUrl = 'http://localhost:3000/api/auth';  // Your backend API
 
   private loggedInSubject = new BehaviorSubject<boolean>(false);  // Observable to track login state
 
