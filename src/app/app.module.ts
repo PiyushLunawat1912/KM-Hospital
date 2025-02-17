@@ -13,7 +13,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminModule } from './admin/admin.module';
-import { AppointmentsComponent } from './appointments/appointments.component'
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { GalleryComponent } from './gallery/gallery.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AppointmentsComponent } from './appointments/appointments.component'
     HeaderComponent,
     FooterComponent,
     AppointmentsComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

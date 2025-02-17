@@ -11,12 +11,14 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component'; // Admin Dashboard
 import { SignupComponent } from './admin/signup/signup.component'; // Admin Signup
 import { LoginComponent } from './admin/login/login.component'; // Admin Login
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   // Public routes
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'gallery', component: GalleryComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'appointments', component: AppointmentsComponent },
   { path: 'contact', component: ContactUsComponent },

@@ -1,0 +1,6 @@
+<div class="gallery">
+  <div class="gallery-item" *ngFor="let item of images">
+    <img [src]="item.url" [alt]="item.name" />
+    <div class="overlay">{{ item.name }}</div>
+  </div>
+</div>

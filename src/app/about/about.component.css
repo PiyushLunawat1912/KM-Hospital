@@ -74,6 +74,27 @@
     color: #666;
     margin: 0;
   }
+
+  .doctor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 550px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .doctor-name-box {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #43a8af;
+    font-size: 18px;
+    font-weight: bold;
+  }
   
   @media (max-width: 768px) {
     .about.section {
@@ -102,6 +123,23 @@
   
     .about-list p {
       font-size: 13px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .doctor-card {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .doctor-card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .doctor-name-box {
+      font-size: 16px;
     }
   }
   

@@ -4,6 +4,11 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { AppService } from '../app-service.service';
   import { AppointmentService } from '../service/appointment.service';
   
+
+  interface ImageItem {
+    url: string;
+    name: string;
+  }
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -106,7 +111,23 @@ export class HomeComponent implements AfterViewInit {
         message: '',
       };
     }
-  
+    images: ImageItem[] = [
+      {url:'assets/img/gallery/Hospital3.jpg', name:"KM Homspital"},
+       {url:'assets/img/gallery/Hospital9.jpg',name:"Passage"},
+      {url: 'assets/img/gallery/Hospital1.jpg',name:"Reception"},
+       {url:'assets/img/gallery/Hospital7.jpg',name:"OPD"},
+       {url:'assets/img/gallery/Hospital8.jpg',name:"OPD"},
+       {url:'assets/img/gallery/Hospital4.jpg', name:"Semi Private Room"},
+       {url:'assets/img/gallery/Hospital10.jpg',name:"Semi Private Room"},
+       {url:'assets/img/gallery/Hospital13.jpg',name:"Dulex Room"},
+       {url:'assets/img/gallery/Hospital12.jpg',name:"Dulex Room"},
+       {url:'assets/img/gallery/Hospital2.jpg',name:"Recovery Ward"},
+       {url:'assets/img/gallery/Hospital6.jpg',name:"General Ward"},
+       {url:'assets/img/gallery/Hospital11.jpg',name:"General Ward"},
+      
+     ];
     
     
+
+
 }
