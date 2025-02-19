@@ -64,26 +64,25 @@
             ><i><b>Contact</b></i></a
           >
         </li>
+        <!-- Buttons -->
+        <header>
+          <nav>
+            <ul>
+              <!-- Other nav items -->
+
+              <!-- Conditionally display login button if user is not logged in -->
+              <li *ngIf="!isLoggedIn">
+                <button (click)="onLogin()">Login</button>
+              </li>
+
+              <!-- Conditionally display logout button if user is logged in -->
+              <li *ngIf="isLoggedIn">
+                <button (click)="onLogout()">Logout</button>
+              </li>
+            </ul>
+          </nav>
+        </header>
       </ul>
-
-      <!-- Buttons -->
-      <header>
-        <nav>
-          <ul>
-            <!-- Other nav items -->
-
-            <!-- Conditionally display login button if user is not logged in -->
-            <li *ngIf="!isLoggedIn">
-              <button (click)="onLogin()">Login</button>
-            </li>
-
-            <!-- Conditionally display logout button if user is logged in -->
-            <li *ngIf="isLoggedIn">
-              <button (click)="onLogout()">Logout</button>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
       <button
         *ngIf="isLoggedIn"
