@@ -7,7 +7,7 @@ import { Observable, BehaviorSubject, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/api/auth';  // Your backend API
+  private apiUrl = 'https://km-backend-y9hq.onrender.com/api/auth';  // Your backend API
 
   private loggedInSubject = new BehaviorSubject<boolean>(false);  // Observable to track login state
 
