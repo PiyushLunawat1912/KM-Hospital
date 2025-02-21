@@ -14,8 +14,8 @@ import { AuthService } from './service/auth.service';  // Import AuthService
 })
 export class AppComponent implements OnInit {
   title = 'km-hospital';
-  isMenuActive: boolean = false;
-  isLoggedIn: boolean = false;  // Track login status
+  isLoggedIn = false;
+  isMenuActive = false;
 
   appointment = {
     name: '',
@@ -35,23 +35,18 @@ export class AppComponent implements OnInit {
     private authService: AuthService  // Inject AuthService
   ) {}
 
-  ngOnInit(): void {
-    
 
-    // Initialize GLightbox for image galleries
+    
+  ngOnInit(): void {
+    // ✅ Subscribe to AuthService login status updates
+    this.authService.getLoginStatus().subscribe(status => {
+      this.isLoggedIn = status;
+    });
+
+    // ✅ Initialize GLightbox
     GLightbox({
       selector: '.glightbox',
     });
-
-    // Subscribe to login status
-    this.authService.getLoginStatus().subscribe(status => {
-      this.isLoggedIn = status;  // Update the login status
-    });
-
-    const user = localStorage.getItem('user');
-    if (user) {
-      this.isLoggedIn = true;
-    }
   }
 
   toggleMenu(): void {
@@ -62,26 +57,29 @@ export class AppComponent implements OnInit {
     this.isMenuActive = false;
   }
 
-  onLogin() {
-    this.router.navigate(['admin/login']);
-    this.isLoggedIn = true;
-    this.closeMenu(); 
-
+  onLogin(): void {
+   
+      this.router.navigate(['admin/login']); // ✅ Navigate after login
+   
   }
 
-  manageAppointments() {
+  onLogout(): void {
+    this.authService.logout(); // ✅ Logout using AuthService
+    this.router.navigate(['/']); // ✅ Redirect to home page
+  }
+
+  manageAppointments(): void {
     this.router.navigate(['appointments']);
   }
- 
-  // Scroll to the appointment section
-  scrollToAppointment(): void {
-    const element = document.getElementById('appointment');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
 
-  // Submit the appointment form
+  
+    scrollToAppointment(): void {
+      const element = document.getElementById('appointment');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+      // Submit the appointment form
   submitAppointment(): void {
     this.appointmentService.createAppointment(this.appointment).subscribe({
       next: (response) => {
@@ -100,17 +98,7 @@ export class AppComponent implements OnInit {
         this.errorMessage = 'Failed to submit appointment. Please try again.';
         console.error('Error:', error);
       },
-    });
-  }
-
- 
-
-  // Handle logout
-  onLogout(): void {
-    localStorage.removeItem('user');
-    this.isLoggedIn = false;
-    this.authService.logout();  // Call logout from AuthService
-    this.router.navigate(['/']);  // Navigate to home page after logout
-    this.closeMenu();
+    })
   }
 }
+  

@@ -70,6 +70,7 @@
       </ul>
 
       <!-- Manage Appointments Button -->
+      <!-- Manage Appointments Button (Only when logged in) -->
       <button
         *ngIf="isLoggedIn"
         (click)="manageAppointments()"
@@ -77,7 +78,6 @@
       >
         Manage Appointments
       </button>
-
       <!-- Call Button (Fixed Position) -->
       <button (click)="scrollToAppointment()" class="appointment-btn">
         Make an Appointment
