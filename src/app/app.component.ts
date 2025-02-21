@@ -64,6 +64,9 @@ export class AppComponent implements OnInit {
 
   onLogin() {
     this.router.navigate(['admin/login']);
+    this.isLoggedIn = true;
+    this.closeMenu(); 
+
   }
 
   manageAppointments() {
@@ -108,5 +111,6 @@ export class AppComponent implements OnInit {
     this.isLoggedIn = false;
     this.authService.logout();  // Call logout from AuthService
     this.router.navigate(['/']);  // Navigate to home page after logout
+    this.closeMenu();
   }
 }
